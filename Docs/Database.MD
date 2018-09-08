@@ -15,7 +15,7 @@ N / NN | Nullable / Not Null
 ### User
 | Field Name | Data Type | PK/FK | N/NN | Description |
 |:----------:|:---------:|:-----:|:----:|:------------|
-UUID | UUID | PK | NULLABLE | 팀 크레센도에서 일괄 관리하는 유저 고유ID
+UUID | UUID | PK | NULLABLE | `DEFAULT uuid_in(md5(random()::text || now()::text)::cstring)` 팀 크레센도에서 일괄 관리하는 유저 고유ID
 
 ### Discord
 | Field Name | Data Type | PK/FK | N/NN | Description |
