@@ -29,19 +29,19 @@ username | VARCHAR(30) | | *NOT NULL* | 디스코드 계정의 글로벌 닉네�
 |:----------:|:---------:|:-----:|:----:|:------------|
 UUID | UUID | FK(User.UUID) | *NOT NULL* | 출석한 사람의 고유ID
 box_id | INTEGER | FK(Attendance_box.box_id) | | 출석상자의 ID
-date | DATE | | *NOT NULL* | 출석한 날짜
+date | DATE | | *NOT NULL* | `DEFAULT now()` 출석한 날짜
 
 ### Attendance_box
 | Field Name | Data Type | PK/FK | N/NN | Description |
 |:----------:|:---------:|:-----:|:----:|:------------|
-box_id | INTEGER | PK | *NOT NULL* | `AUTOINC` 출석 상자의 ID 
+box_id | SERIAL | PK | *NOT NULL* | 출석 상자의 ID 
 class | CHARACTER(1) | | *NOT NULL* | 출석 상자의 등급 (A, B, C)
 receipt_id | INTEGER | FK(Points.receipt_id) | *NULLABLE* | 출석 상자를 열었을 때 보상한 영수증 ID
 
 ### Points
 | Field Name | Data Type | PK/FK | N/NN | Description |
 |:----------:|:---------:|:-----:|:----:|:------------|
-receipt_id | INTEGER | PK | *NOT NULL* | `AUTOINC` 영수증ID
+receipt_id | SERIAL | PK | *NOT NULL* | 영수증ID
 UUID | UUID | FK(User.UUID) | *NOT NULL* | 결제자의 고유ID
 reward_type | VARCHAR(5) | | *NOT NULL* | 결제의 종류 *ex. 후원, 이용권 구매, 출석 보상*
 point | INTEGER | | *NOT NULL* | 변동된 포인트 값
