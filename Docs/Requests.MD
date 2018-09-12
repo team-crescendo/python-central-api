@@ -32,6 +32,7 @@ discord_name | string | A nickname of a specific discord user
     }
     ```
 
+---
 
 ### Get User info
 > Get information of a specific user.
@@ -62,6 +63,7 @@ Token-Based authentification is required.
     }
     ```
 
+---
 
 ### Search Users
 > Search users with given metadata.
