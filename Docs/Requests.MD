@@ -28,7 +28,9 @@ discord_name | string | A nickname of a specific discord user
     - Response
     ```json
     {
-        "uuid": "48515667-a305-6f5e-9e4f-88016f5a63b4"
+        "uuid": "48515667-a305-6f5e-9e4f-88016f5a63b4",
+        "discord_id": "281729627003682818",
+        "discord_name": "이은학"
     }
     ```
 
