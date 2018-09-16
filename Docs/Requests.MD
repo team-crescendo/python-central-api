@@ -2,7 +2,7 @@
 
 ## User
 ### Create User
-> Make a unique user to manage multi-platform account.
+> Make a unique user to manage multi-platform accounts.
 
 #### Authentification
 Token-Based authentification is required.
@@ -14,7 +14,7 @@ Token-Based authentification is required.
 Name | Type | Description
 -----|------|------------
 discord_id | integer | A discord id to register with
-discord_name | string | A nickname of a specific discord user
+discord_name | string | Specific discord user's nickname
 
 #### Example Request & Response
 - Case 1
@@ -37,7 +37,7 @@ discord_name | string | A nickname of a specific discord user
 ---
 
 ### Get User info
-> Get information of a specific user.
+> Get specific user's information.
 
 #### Authentification
 Token-Based authentification is required.
@@ -131,7 +131,7 @@ Token-Based authentification is required.
 
 ## Point
 ### Fetch Point Data of a Specific User
-> Fetch point data of a specific user by his/her uuid.
+> Fetch specific user's point data with one's uuid.
 
 #### Authentification
 Token-Based authentification is required.
